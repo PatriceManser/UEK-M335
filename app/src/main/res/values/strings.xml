@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Morse-Code App</string>
+    <string name="tab_text_1">Get Help</string>
+    <string name="tab_text_2">See Requests</string>
+</resources>
