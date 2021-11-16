@@ -1,16 +1,17 @@
-package com.adcubum.morsecodeapp
+package com.adcubum.morsecodeapp.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.adcubum.morsecodeapp.R
 
-class GetHelpFragment : Fragment() {
+class SeeRequestsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_get_help, container, false)
+        return inflater.inflate(R.layout.fragment_see_requests, container, false)
     }
 }

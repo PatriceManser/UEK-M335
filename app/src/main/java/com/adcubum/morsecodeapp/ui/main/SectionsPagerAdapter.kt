@@ -4,9 +4,7 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.adcubum.morsecodeapp.GetHelpFragment
 import com.adcubum.morsecodeapp.R
-import com.adcubum.morsecodeapp.SeeRequestsFragment
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -21,7 +19,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
-        return if (position != 1) GetHelpFragment() else SeeRequestsFragment()
+        return if (position != 1) GetHelpFragment(context) else SeeRequestsFragment()
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

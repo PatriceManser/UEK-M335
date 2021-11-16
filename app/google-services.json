@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412899725417",
+    "project_id": "morse-code-app-f2cb6",
+    "storage_bucket": "morse-code-app-f2cb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412899725417:android:20ae65808713ef45d8d2f8",
+        "android_client_info": {
+          "package_name": "com.adcubum.morsecodeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412899725417-65on4bjpcqm7fq8htil3upqmbmnt0h6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs5Wags7SLzTuY4WOOlg8CEXp2kOyQcSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412899725417-65on4bjpcqm7fq8htil3upqmbmnt0h6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
