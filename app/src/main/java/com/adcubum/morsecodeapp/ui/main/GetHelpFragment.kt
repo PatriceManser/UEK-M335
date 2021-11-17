@@ -13,8 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class GetHelpFragment(context: Context) : Fragment() {
 
-    val mediaPlayer: MediaPlayer = MediaPlayer.create(context, R.raw.beepsound)
-
+    val morseCodeService = MorseCodeService(context)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +24,7 @@ class GetHelpFragment(context: Context) : Fragment() {
         val sosButton: Button = view.findViewById(R.id.sosButton)
 
         sosButton.setOnClickListener { view ->
-            MorseCodeService(mediaPlayer).sendSOS()
+            morseCodeService.sendSOS()
             Snackbar.make(view, "Rescue is on its way", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
