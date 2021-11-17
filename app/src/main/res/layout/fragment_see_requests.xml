@@ -3,13 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.SeeRequestsFragment">
+    tools:context=".ui.main.SeeRequestsFragment"
+    android:background="#C3E6FD">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="See requests fragment"
-        android:background="@android:color/holo_orange_light"/>
-
+        android:layout_height="match_parent" />
 </FrameLayout>
