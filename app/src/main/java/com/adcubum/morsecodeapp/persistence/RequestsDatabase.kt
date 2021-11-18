@@ -1,5 +1,7 @@
-package com.adcubum.morsecodeapp
+package com.adcubum.morsecodeapp.persistence
 
+import com.adcubum.morsecodeapp.core.GeoLocation
+import com.adcubum.morsecodeapp.core.Request
 import com.google.firebase.database.FirebaseDatabase
 import java.time.LocalDateTime
 import kotlin.random.Random

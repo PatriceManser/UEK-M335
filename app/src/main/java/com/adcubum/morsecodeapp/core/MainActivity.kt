@@ -1,4 +1,4 @@
-package com.adcubum.morsecodeapp
+package com.adcubum.morsecodeapp.core
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

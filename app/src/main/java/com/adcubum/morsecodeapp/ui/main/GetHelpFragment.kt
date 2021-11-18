@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.adcubum.morsecodeapp.MorseCodeService
+import com.adcubum.morsecodeapp.core.MorseCodeService
 import com.adcubum.morsecodeapp.R
 import com.google.android.material.snackbar.Snackbar
 

@@ -13,7 +13,7 @@ class SeeRequestsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     )
-    : View? {
+            : View? {
         return inflater.inflate(R.layout.fragment_see_requests, container, false)
     }
 }

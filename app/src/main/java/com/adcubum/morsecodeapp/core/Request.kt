@@ -1,4 +1,4 @@
-package com.adcubum.morsecodeapp
+package com.adcubum.morsecodeapp.core
 
 import java.time.LocalDateTime
 
