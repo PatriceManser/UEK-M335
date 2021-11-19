@@ -6,8 +6,8 @@
     tools:context=".ui.main.SeeRequestsFragment"
     android:background="#C3E6FD">
 
-
     <ListView
+        android:id="@+id/requestsListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 </FrameLayout>

@@ -6,14 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.adcubum.morsecodeapp.R
+import com.adcubum.morsecodeapp.core.Request
+import com.adcubum.morsecodeapp.persistence.DatabaseAdapter
 
-class SeeRequestsFragment : Fragment() {
+class SeeRequestsFragment() : Fragment() {
+
+    private val databaseAdapter = DatabaseAdapter()
+    val requestItems = emptyList<Request>().toMutableList()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     )
             : View? {
-        return inflater.inflate(R.layout.fragment_see_requests, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_see_requests, container, false)
+
+        databaseAdapter.updateListData(rootView)
+
+        return rootView
     }
+
+
+
 }
