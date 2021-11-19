@@ -59,6 +59,7 @@ class DatabaseAdapter {
                             requestItems.sortedByDescending { it.timestamp }.map {
                                 """
                                     |${it.message}
+                                    |
                                     |${it.timestamp.format(DateTimeFormatter.ofPattern("dd/MM/yyyy\thh:mm:ss"))}
                                     |GeoLocation= Long: ${it.geoLocation!!.long} Lat: ${it.geoLocation!!.lat}""".trimMargin()
                             }

@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.SeeRequestsFragment"
-    android:background="#C3E6FD">
+    android:background="#C3E6FD"
+    tools:context=".ui.main.SeeRequestsFragment">
 
-    <ListView
-        android:id="@+id/requestsListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/refreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_gravity="right"
+            android:baselineAlignBottom="true"
+            android:clickable="true"
+            android:src="@android:drawable/ic_popup_sync" />
+
+        <ListView
+            android:id="@+id/requestsListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
 </FrameLayout>
