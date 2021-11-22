@@ -14,7 +14,6 @@ import com.google.android.material.snackbar.Snackbar
 class SeeRequestsFragment() : Fragment() {
 
     private val databaseAdapter = DatabaseAdapter()
-    val requestItems = emptyList<Request>().toMutableList()
 
     override fun onCreateView(
         inflater: LayoutInflater,

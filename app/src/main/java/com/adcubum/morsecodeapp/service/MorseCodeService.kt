@@ -10,9 +10,10 @@ import com.adcubum.morsecodeapp.persistence.DatabaseAdapter
 class MorseCodeService(context: Context) : Activity() {
     val mediaPlayer: MediaPlayer = MediaPlayer.create(context, R.raw.beepsound)
     val requestsDatabase = DatabaseAdapter()
+    val locationProvider = LocationProvider(context)
 
     fun sendSOS(message: String) {
         mediaPlayer.start()
-        requestsDatabase.saveRequest(message, GeoLocation(55.1111, 44.323234))
+        requestsDatabase.saveRequest(message, locationProvider.getLocation())
     }
 }

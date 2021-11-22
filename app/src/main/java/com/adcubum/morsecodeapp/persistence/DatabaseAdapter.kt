@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.util.*
 import kotlin.random.Random
 
 
@@ -27,11 +28,11 @@ class DatabaseAdapter {
             GeoLocation(
                 geoLocation.long,
                 geoLocation.lat
-            ), //TODO("get the getGeoLocation function working from commit 199cd2c99")
+            ),
             LocalDateTime.now(),
         )
         val requests = db.getReference("requests")
-        requests.child(Random.nextInt().toString()).setValue(request)
+        requests.child(UUID.randomUUID().toString()).setValue(request)
         deleteOldItems()
     }
 
