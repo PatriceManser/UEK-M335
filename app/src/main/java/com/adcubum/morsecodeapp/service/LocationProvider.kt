@@ -12,7 +12,6 @@ import com.adcubum.morsecodeapp.core.GeoLocation
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.LocationServices
-import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 
 
@@ -43,13 +42,16 @@ class LocationProvider(val context: Context) : AppCompatActivity(),
             Log.e("PermissionError", "The Permission was not given for the location.")
         } else {
 
-            val location = LocationServices.getFusedLocationProviderClient(context).lastLocation
+            runBlocking {
+                val location =LocationServices.getFusedLocationProviderClient(context).lastLocation
+                location.addOnCompleteListener { task ->
+                    val currentLocation = task.result
+                    latitude = currentLocation.latitude
+                    longitude = currentLocation.longitude
+                }
 
-            location.addOnCompleteListener { task ->
-                val currentLocation = location.result
-                latitude = currentLocation.latitude
-                longitude = currentLocation.longitude
             }
+
         }
 
         return GeoLocation(longitude, latitude)
